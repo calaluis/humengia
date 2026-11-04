@@ -1,6 +1,6 @@
 # Marco teórico de HUMENGIA — Investigación inicial v0.1
 
-> **Estado:** borrador de investigación, abierto a revisión. **Fecha:** 2026-11-04.  
+> **Estado:** revisión exploratoria v0.1 integrada para investigación y evolución; no constituye validación de HUMENGIA. **Fecha:** 2026-11-04.  
 > **Naturaleza:** revisión exploratoria y selectiva de literatura; **no** revisión sistemática, estándar, certificación ni demostración de eficacia.  
 > **Documentos relacionados:** [visión y principios](../README.md) · [DEC-001 — Colaboración humano–IA](../decisiones/DEC-001-colaboracion-humano-ia.md).
 
@@ -108,15 +108,30 @@ Antes de recomendar una práctica concreta:
 
 ## 6. Agenda inicial de hipótesis comprobables
 
-Estas afirmaciones son **preguntas de investigación**, no hallazgos demostrados:
+Estas son **hipótesis propuestas**, no resultados demostrados. Mantenemos los identificadores H01–H05 para preservar trazabilidad; añadimos hipótesis específicas sobre la contribución y el control de IA, que pasan a ser la prioridad experimental.
 
-| ID | Hipótesis a poner a prueba | Observaciones posibles | Precaución |
-| --- | --- | --- | --- |
-| H01 | La colaboración humano–IA con crítica recíproca reduce ambigüedades no detectadas frente a una alternativa definida | Ambigüedades relevantes detectadas; correcciones posteriores; tiempo de revisión | Mantener comparable la dificultad y experiencia del equipo |
-| H02 | Analizar objetivos y procesos del cliente de forma proporcionada mejora el ajuste de la solución | Criterios de aceptación satisfechos; retrabajo; evaluación del beneficiario | Medir también el costo del análisis |
-| H03 | Seleccionar prácticas por pertinencia y riesgo reduce sobrecarga sin empeorar calidad | Tiempo en tareas no productivas; defectos; cambios y mantenibilidad | No confundir menos documentación con más eficacia |
-| H04 | Definir lenguaje de dominio validado mejora la comunicación entre cliente, ingeniería e IA | Interpretaciones contradictorias; dudas resueltas; cambios en reglas | Controlar diferencias entre tipos de dominio |
-| H05 | Medir resultados ligados a objetivos aporta mejor información de decisión que medir solo actividad | Decisiones corregidas con datos; cumplimiento de objetivos; utilidad percibida de indicadores | Evitar sesgos de autoevaluación y métricas fáciles de manipular |
+### 6.1. Colaboración humano–IA (prioridad)
+
+| ID | Hipótesis a poner a prueba | Observaciones sugeridas |
+| --- | --- | --- |
+| H01 | La crítica recíproca humano–IA detecta ambigüedades relevantes frente a una modalidad comparativa definida | Ambigüedades confirmadas; retrabajo; tiempo de revisión |
+| H04 | Un vocabulario de dominio contrastado por humanos e IA disminuye las interpretaciones erróneas frente a interacción no estructurada | Errores de interpretación; reglas confirmadas por cliente; costo de validación |
+| H06 | Delegación diferenciada por riesgo y capacidad comprobable disminuye correcciones tardías respecto de delegación uniforme | Incidentes; retrabajo; tiempo humano de supervisión |
+| H07 | Una revisión proporcional al impacto, reversibilidad y verificabilidad evita errores importantes con menor sobrecarga que la revisión exhaustiva | Defectos relevantes; costo total de revisión; fallos no detectados |
+| H08 | Registrar procedencia de aportes de IA y validaciones humanas mejora la auditabilidad de decisiones sin una carga desproporcionada | Reconstrucción independiente de decisiones; minutos de registro; omisiones |
+| H09 | La colaboración humano–IA aporta beneficios netos en ciertos contextos, pero puede aumentar el tiempo total en otros | Tiempo total incluyendo instrucciones, revisión y corrección; calidad; experiencia del equipo |
+
+Las comparaciones deberán especificar equipo, tarea, herramientas, criterios de calidad y alternativa de referencia. El uso de IA no constituye por sí mismo una mejora demostrada.
+
+### 6.2. Fundamentos de ingeniería y contexto (hipótesis de apoyo)
+
+| ID | Hipótesis a poner a prueba | Observaciones posibles |
+| --- | --- | --- |
+| H02 | Analizar objetivos y procesos del cliente de forma proporcionada mejora el ajuste de la solución | Aceptación; retrabajo; costo del análisis |
+| H03 | Seleccionar prácticas por pertinencia y riesgo reduce sobrecarga sin empeorar calidad | Trabajo no productivo; defectos; mantenimiento |
+| H05 | Medir resultados ligados a objetivos aporta mejor información que medir solo actividad | Utilidad de indicadores; decisiones revisadas; cumplimiento de objetivos |
+
+Estas hipótesis de apoyo serían relevantes incluso sin IA. Se estudian para no perder el propósito de ingeniería centrada en el cliente, **pero no se presentan como el diferenciador específico de HUMENGIA**.
 
 **Protocolo mínimo recomendado, sujeto a diseño posterior:** precisar población y contexto; especificar intervención y comparación; acordar criterios con el beneficiario; registrar línea base cuando sea viable; observar resultados y costos; documentar incidentes, cambios de alcance y factores de confusión; exponer limitaciones. Para afirmaciones causales fuertes se necesitarán diseños y tamaños de muestra adecuados; un único caso ilustrativo no basta para validación general.
 
@@ -163,10 +178,10 @@ Las fuentes están ordenadas por temática, no por jerarquía. Los enlaces a pá
 
 ## 9. Próximos asuntos a investigar
 
-1. Examinar en mayor profundidad investigaciones específicas sobre **equipos de ingeniería de software** que trabajan con IA, diferenciándolas de estudios de interfaces humano–IA.
+1. Examinar críticamente investigaciones específicas sobre **equipos de ingeniería de software** que trabajan con IA, incluyendo resultados favorables, desfavorables o inconclusos; distinguir productividad percibida y medida. Revisar experimentos de Peng et al. (2023), METR (2025 y actualizaciones posteriores) e informes DORA 2024–2025 antes de extraer conclusiones.
 2. Contrastar GQM con medidas de resultados del negocio y calidad en uso; diseñar indicadores modestos y auditables.
 3. Evaluar el aporte real de arquitectura empresarial y modelado de procesos en proyectos de distinta complejidad.
 4. Investigar sesgos, límites de autonomía, seguridad, privacidad y responsabilidad profesional de la colaboración con agentes.
 5. Formular un protocolo de investigación que permita comparar alternativas sin asumir de antemano que HUMENGIA será superior.
 
-**Estado al cierre:** marco teórico inicial documentado; fundamentos relacionados, pero **ninguna hipótesis de efectividad HUMENGIA declarada validada**. La revisión y aceptación de este texto corresponden al mantenedor.
+**Estado al cierre:** revisión exploratoria v0.1 aceptada como base de investigación mediante [PR #2](https://github.com/calaluis/humengia/pull/2), fusionada el 2026-11-04. Su integración no valida las hipótesis ni sustituye una revisión sistemática. Las propuestas operativas futuras requieren decisiones y contrastación propias.
