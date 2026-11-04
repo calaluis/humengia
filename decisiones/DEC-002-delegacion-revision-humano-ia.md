@@ -46,7 +46,17 @@ La matriz orienta una conversación técnica; no sustituye el juicio del respons
 
 **Nunca autoriza por defecto:** uso de credenciales sin permiso, difusión de datos confidenciales, cambios irreversibles, acciones en producción, decisiones legalmente reservadas a personas o aceptación de reglas de negocio en nombre del cliente. Las autorizaciones explícitas y restricciones del entorno prevalecen sobre cualquier nivel.
 
-**La crítica es bidireccional:** si la IA identifica un riesgo no contemplado, solicita elevar el nivel; si el humano encuentra una clasificación demasiado exigente, puede simplificarla dejando fundamento y evidencia de que las consecuencias son acotadas.
+**Autoridad de clasificación:** la IA y cualquier integrante humano pueden proponer un nivel o solicitar elevarlo. **Solo el responsable humano confirma la clasificación y puede reducirla**, registrando el fundamento y las evidencias de control. Una clasificación sugerida por IA no autoriza ejecución. Si surge un riesgo mayor o desconocido, se detienen las acciones afectadas hasta la reevaluación humana.
+
+### Evidencia orientativa por nivel
+
+| Nivel | Evidencia proporcionada |
+| --- | --- |
+| N1 | Comprobación apropiada al trabajo y revisión ligera; automatizar pruebas cuando existan |
+| N2 | Revisión humana documentada de la decisión y evidencia de cumplimiento antes de integrar o liberar |
+| N3 | Autorización humana previa, análisis de riesgos, prevención o contingencia cuando corresponda y verificación reforzada |
+
+En una actividad irreversible no se debe fingir un plan de reversión: se necesitan controles preventivos, análisis de alternativas y autorización expresa.
 
 ## 5. Preguntas de control mínimas
 
@@ -122,6 +132,6 @@ Un caso propio puede demostrar factibilidad y revelar problemas, pero **no justi
 
 ## 10. Estado de aprobación y límites
 
-**DEC-002 es una propuesta para discusión.** No autoriza por sí misma automatizaciones ni intervenciones en sistemas de terceros, no modifica la premisa del README y no reemplaza DEC-001. Su utilidad y proporcionalidad deben contrastarse con casos reales antes de convertirla en práctica estable. El mantenedor decidirá si acepta la propuesta, solicita correcciones o la descarta.
+**DEC-002 integra la [propuesta operativa HUMENGIA v0.1](../PROPUESTA-HUMENGIA-v0.1.md) y es una propuesta para discusión.** No autoriza por sí misma automatizaciones ni intervenciones en sistemas de terceros, no modifica la premisa del README y no reemplaza DEC-001. Su utilidad y proporcionalidad deben contrastarse con casos reales antes de convertirla en práctica estable. El mantenedor decidirá si acepta la propuesta, solicita correcciones o la descarta.
 
 Su relación con DDD, TOGAF, BPM y otras disciplinas es **selectiva y orientada por el problema**; el objetivo sigue siendo ingeniería de software centrada en el cliente mediante colaboración humana e IA, no un marco universal de dirección de empresas.
