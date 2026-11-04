@@ -1,9 +1,9 @@
 # DEC-001 — Modelo de colaboración humano–IA
 
-**Estado:** Propuesta para discusión (no aprobada)  
+**Estado:** Boceto conceptual v0.1 aceptado para investigación y evolución; no validado empíricamente  
 **Fecha:** 2026-11-04  
 **Ámbito:** Principios operativos de HUMENGIA  
-**Responsable de la decisión:** Mantenedor humano del proyecto, tras su revisión  
+**Responsable de la decisión:** Mantenedor humano del proyecto  
 **Relación:** [Principios fundacionales](../README.md)
 
 ## 1. Problema que queremos resolver
@@ -46,20 +46,16 @@ Estas son hipótesis de trabajo, no resultados de una comparación experimental.
 
 ### Relación selectiva con conocimientos existentes
 
-Los enfoques siguientes son **referentes para estudiar**, no dependencias de HUMENGIA ni requisitos de adopción:
+Los enfoques siguientes ofrecen conocimientos útiles cuya incorporación dependerá del contexto:
 
-| Referente | Conocimiento potencialmente útil | Adopción que NO se presupone |
-| --- | --- | --- |
-| Domain-Driven Design (DDD) | Comprensión de reglas del dominio, lenguaje compartido y evolución del modelo | Patrones tácticos o estructuras de software obligatorias |
-| TOGAF y arquitectura empresarial | Relación entre objetivos, capacidades, procesos, información, aplicaciones y decisiones tecnológicas | Aplicación completa del ADM o de sus entregables |
-| Gestión por procesos (BPM) y BPMN | Comprensión, análisis y medición de procesos; representación compartida cuando aporte claridad | Diagramar exhaustivamente todos los procesos o exigir BPMN |
-| SDD, TDD, XP y otras prácticas de ingeniería | Especificaciones verificables, pruebas y retroalimentación temprana | Secuencias, ceremonias o herramientas universales |
+| Referente | Aporte que interesa estudiar |
+| --- | --- |
+| Domain-Driven Design (DDD) | Conocimiento del dominio y lenguaje compartido con el cliente |
+| TOGAF y arquitectura empresarial | Relación entre objetivos, capacidades, procesos y decisiones tecnológicas |
+| Gestión por procesos (BPM) y BPMN | Comprensión, análisis y medición de procesos cuando resulte pertinente |
+| SDD, TDD, XP y otras prácticas | Especificación, pruebas y retroalimentación oportuna según necesidad |
 
-Una práctica propuesta para HUMENGIA se evaluará por su **pertinencia**, **fundamentos**, **beneficio esperado** (eficacia, eficiencia, oportunidad o calidad), **costo y proporcionalidad**, y **posibilidad de verificación**. Si faltan evidencias, se trata como hipótesis por investigar, no como práctica universalmente superior.
-
-Estas relaciones conceptuales no implican conformidad con estándares, afiliación, certificación ni validación científica de HUMENGIA. Su análisis bibliográfico detallado corresponderá a un futuro marco teórico, no a esta decisión operativa.
-
-**Referencias iniciales para investigación:** [Eric Evans y DDD, reseña de Martin Fowler](https://martinfowler.com/bliki/DomainDrivenDesign.html); [TOGAF — The Open Group](https://www.opengroup.org/togaf); [BPMN — Object Management Group](https://www.omg.org/bpmn/). Son antecedentes orientativos, no una lista cerrada ni una adopción normativa.
+Una práctica propuesta para HUMENGIA se evaluará por su **pertinencia**, **fundamentos**, **beneficio esperado**, **proporcionalidad** y **posibilidad de verificación**. La justificación bibliográfica y las limitaciones de cada referencia se reúnen en el [marco teórico exploratorio](../investigacion/marco-teorico.md).
 
 ## 4. Resolución de desacuerdos técnicos
 
@@ -80,12 +76,14 @@ Un registro de decisión debería permitir reconstruir, sin documentación innec
 
 - **Necesidad y contexto:** problema, persona o colectivo beneficiario y, cuando resulte relevante, objetivo y proceso del cliente afectado.
 - **Alternativas:** opciones consideradas y sus principales consecuencias.
-- **Fundamento:** criterios, riesgos, restricciones, referencias, pruebas y origen de los supuestos relevantes; distinguir información confirmada por el cliente de inferencias humanas o de IA.
-- **Responsable y fecha:** quién tomó la decisión y cuándo.
+- **Fundamento y procedencia:** criterios, riesgos, restricciones, fuentes y pruebas; distinguir datos confirmados por el cliente de inferencias humanas o de IA.
+- **Contribución de la IA:** qué propuso, advirtió, elaboró o ejecutó cuando su participación fue relevante.
+- **Validación humana:** qué revisó, corrigió, aceptó o rechazó el responsable, y con qué evidencia.
+- **Responsable y fecha:** quién decidió y cuándo.
 - **Resultado esperado:** qué se intenta mejorar, con qué criterios de aceptación y cómo se verificará.
 - **Resultado observado:** qué ocurrió realmente, cuando exista evidencia posterior.
 
-No toda modificación requiere un documento DEC independiente. Una explicación en una PR o un commit puede ser suficiente para cambios menores; decisiones de mayor impacto pueden necesitar análisis y aprobación explícitos. La trazabilidad puede enlazar, según sea útil, objetivo del cliente, proceso, necesidad, requisito, decisión, implementación y resultado, **sin imponer una cadena documental completa a todos los proyectos**.
+No toda modificación requiere un documento DEC independiente. Una explicación en una PR o un commit puede ser suficiente para cambios menores. Los campos de procedencia pueden consistir en enlaces a evidencia ya existente; no se exige duplicar registros. Para decisiones de mayor impacto se requiere una revisión proporcionada. La trazabilidad puede conectar, cuando aporte valor, objetivo del cliente, proceso, necesidad, requisito, decisión, implementación y resultado.
 
 ## 6. Cómo se demostrará el valor del modelo
 
@@ -101,8 +99,8 @@ Antes de concluir que hubo mejora, se procurará acordar indicadores y, cuando s
 
 ## 7. Límites y preguntas abiertas
 
-- ¿Cómo graduar el rigor de una decisión según su riesgo sin crear burocracia?
-- ¿Qué criterios permiten delegar tareas a la IA y cuáles requieren revisión humana inmediata?
+- ¿Cómo graduar el rigor de una decisión según impacto, reversibilidad y verificabilidad sin crear burocracia? (Tema prioritario de DEC-002).
+- ¿Qué criterios permiten delegar tareas a la IA y cuáles requieren autorización o revisión humana inmediata? (Tema prioritario de DEC-002).
 - ¿Qué constituye evidencia suficiente de satisfacción del cliente, además de pruebas automatizadas?
 - ¿Cómo registrar desacuerdos y aprendizajes preservando privacidad, secretos y propiedad intelectual?
 - ¿Qué experimentos permitirán falsar o modificar esta propuesta?
@@ -112,4 +110,4 @@ Antes de concluir que hubo mejora, se procurará acordar indicadores y, cuando s
 
 ## 8. Estado de aprobación
 
-**Pendiente de discusión y decisión humana.** Esta propuesta no modifica automáticamente los cuatro principios del README ni agrega un quinto principio fundacional. No establece una certificación, conformidad normativa ni obligación de adoptar metodologías, proveedores o tecnologías. Su integración a `main` requerirá revisión y aprobación del mantenedor de HUMENGIA.
+**Boceto conceptual v0.1 aceptado como base de investigación y evolución.** El mantenedor revisó y fusionó [PR #1](https://github.com/calaluis/humengia/pull/1) en `main` el 2026-11-04. Esta aceptación autoriza su utilización como fundamento de trabajo, **no demuestra su eficacia ni aprueba automáticamente un procedimiento operativo**. HUMENGIA conserva los cuatro principios del README; las prácticas de delegación y revisión se desarrollarán como propuestas separadas. Las referencias externas son fuentes de conocimiento, no una declaración de conformidad o certificación.
