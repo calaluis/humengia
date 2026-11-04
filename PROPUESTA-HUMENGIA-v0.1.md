@@ -52,6 +52,10 @@ El ciclo es **iterativo y no secuencial de manera rígida**. Se puede volver a c
 | **E. Contrastar** | ¿El resultado satisface la necesidad y llega oportunamente? ¿Qué cambió respecto de la situación inicial? | Aceptación real, medición, observaciones y defectos relevantes |
 | **F. Aprender** | ¿Qué debemos mantener, corregir o descartar, incluso del propio HUMENGIA? | Decisión posterior, cambio de hipótesis, incidencia o mejora registrada |
 
+**Ante bloqueos (propuesta R2):** comprender el defecto no basta para resolver la necesidad. Registrar brevemente **causa confirmada o hipótesis, alternativa de solución, siguiente acción y responsable, dependencia y prueba observable de desbloqueo**. Si no es factible avanzar, señalar por qué y qué hecho permitiría retomar. La investigación es válida como incremento, pero no se presenta como entrega funcional. Si hay varias rutas posibles, seleccionar la más útil y segura con la información disponible; no es necesario agotarlas todas antes de actuar.
+
+**Entrega utilizable (propuesta R4):** antes de cerrar un compromiso con el cliente, distinguir: **(i) artefacto implementado, (ii) comportamiento técnico verificado y (iii) capacidad efectiva de uso o beneficio acordado**. Cada logro se registra por separado; una biblioteca probada, un prototipo o una CI satisfactoria pueden ser hitos legítimos sin equivaler todavía a una solución disponible. Cuando el resultado requiera instalación, integración, soporte, permisos o validación en entorno real, esas dependencias deben quedar explícitas y vinculadas a un siguiente incremento.
+
 **Criterio práctico:** para una tarea pequeña, una PR con contexto, decisión y pruebas puede contener toda la evidencia. No hay obligación de producir seis documentos ni seis reuniones. Para tareas complejas o peligrosas puede ser necesario explicitar más.
 
 ## 5. Cómo se trabaja con IA sin perder el control
@@ -78,8 +82,11 @@ Un cambio relevante debe permitir contestar:
 4. **Intervención humana:** ¿qué confirmó, corrigió, rechazó o autorizó la persona responsable?
 5. **Verificación:** ¿qué prueba, fuente o comprobación respalda la conclusión?
 6. **Resultado:** ¿qué se obtuvo y qué evidencia de satisfacción o fallo existe?
+7. **Continuidad constructiva, cuando corresponda:** ¿qué propuesta, objeción, limitación, alternativa o corrección útil queda pendiente de decisión, prueba o entrega, y dónde se registró?
 
-**Una PR, incidencia, registro de prueba o acta existente puede ser suficiente**. DEC-002 contiene la definición operativa más detallada de esos campos; DEC-001 conserva el principio conceptual. Registrar la referencia a evidencias es preferible a duplicar su contenido; no se requieren transcripciones completas de conversaciones ni secretos.
+**Una PR, incidencia, registro de prueba o acta existente puede ser suficiente**. DEC-002 contiene la definición operativa más detallada de esos campos, incluida una guía para vincular [afirmaciones con evidencias](./decisiones/DEC-002-delegacion-revision-humano-ia.md#correspondencia-entre-afirmación-y-evidencia-propuesta-r1); DEC-001 conserva el principio conceptual. Registrar la referencia a evidencias es preferible a duplicar su contenido; no se requieren transcripciones completas de conversaciones ni secretos.
+
+La **trazabilidad constructiva** conserva lo relevante para futuras acciones o decisiones, no cada idea espontánea: registrar **propuesto / aceptado o rechazado / implementado / comprobado** solo cuando esos estados existan, sin atribuir validaciones a nadie. Las aportaciones rechazadas que puedan prevenir errores posteriores también merecen referencia; no se impone un formulario ni un repositorio central de pensamientos.
 
 ### Evidencia orientativa por nivel
 
@@ -97,14 +104,16 @@ Antes del piloto se documentan: **unidad de trabajo**, problema, criterio de ace
 
 | Criterio | Observación posible |
 | --- | --- |
-| Eficacia | Necesidades y criterios aceptados por el beneficiario; incumplimientos y retrabajo |
+| Eficacia | Necesidades y criterios aceptados por el beneficiario; incumplimientos, bloqueos y retrabajo |
 | Eficiencia | Tiempo total invertido, incluyendo coordinación, prompts, revisión, correcciones y controles |
 | Oportunidad | Tiempo hasta un resultado utilizable y cumplimiento de la necesidad temporal |
 | Calidad | Pruebas relevantes, defectos, incidentes, estabilidad y observaciones en el contexto disponible |
 | Trazabilidad | Si otra persona puede reconstruir decisiones y fuentes sin información ficticia |
 | Sobrecarga | Tiempo o pasos añadidos por HUMENGIA y su utilidad percibida y observada |
 
-**No serán indicadores de éxito por sí solos**: cantidad de documentos, líneas de código, prompts, agentes, pruebas ejecutadas o archivos cambiados.
+**No serán indicadores de éxito por sí solos**: cantidad de documentos, líneas de código, prompts, agentes, pruebas ejecutadas o archivos cambiados. Tampoco se equipara «CI verde» con «producto utilizable»: informar el alcance de la prueba y el estado real de entrega, incluidos los hitos parciales, impedimentos y dependencias para que el cliente pueda obtener valor.
+
+**Ejemplo hipotético, sin datos de proyectos reales:** una biblioteca supera todas sus pruebas de lectura de archivos, pero la aplicación aún no permite al usuario abrirlos. Se puede aprobar esa biblioteca como **componente verificado**, mientras la funcionalidad visible se mantiene **pendiente**. La incidencia que bloquea la entrega registra alternativa, responsable y demostración de aceptación: abrir un archivo real en el entorno acordado. Si una IA propuso exigir hardware para probar la biblioteca, esa objeción y la decisión de ajustar el alcance se conservan como aprendizaje, no como requisito retrospectivo.
 
 Si el modelo aumenta costos sin aportar beneficios pertinentes, omite riesgos relevantes o dificulta entregar a tiempo, deberá corregirse o descartarse parcialmente. Registrar tanto resultados favorables como desfavorables.
 
@@ -131,11 +140,11 @@ La validación inicial debe hacerse en **un proyecto de ingeniería de software 
 2. **Selección segura:** escoger una actividad limitada, preferentemente reversible, con pruebas disponibles y permisos explícitos; no usar una modificación crítica como primera prueba.
 3. **Aplicación:** ejecutar un incremento con HUMENGIA; conservar decisiones, aportes humano–IA, revisión y pruebas en herramientas ya utilizadas por el proyecto.
 4. **Observación:** medir tiempo total, cumplimiento, defectos, evidencia y sobrecarga frente a una referencia razonable.
-5. **Revisión:** registrar qué fue útil, qué falló y qué debe cambiar antes de un segundo ensayo.
+5. **Revisión:** registrar qué fue útil, qué falló y qué debe cambiar antes de un segundo ensayo, separando resultados técnicos de valor observable para el cliente.
 
 No se cambiarán políticas, puertas de seguridad, derechos de acceso ni requisitos del proyecto piloto en nombre de HUMENGIA. **El caso de estudio no autoriza despliegues ni actividades físicas.** Si el repositorio es privado, las evidencias internas permanecerán privadas; cualquier publicación externa será agregada o anonimizada y requerirá aprobación.
 
-Una sola experiencia sirve para comprobar **viabilidad y encontrar defectos del modelo**, no para acreditar superioridad universal ni causalidad.
+Una sola experiencia sirve para comprobar **viabilidad y encontrar defectos del modelo**, no para acreditar superioridad universal ni causalidad. Para evolucionar HUMENGIA, registrar solo **aprendizajes generalizables sin revelar datos privados**, incluso predicciones refutadas y prácticas que añadieron sobrecarga; proponer correcciones, contrastarlas y someter su adopción a revisión humana. Un piloto documentado no convierte automáticamente sus hallazgos en reglas universales.
 
 ## 10. Estado y decisión pendiente
 
