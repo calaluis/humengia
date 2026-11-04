@@ -21,6 +21,7 @@ Se propone un mecanismo ligero para equipos de ingeniería de software que traba
 4. **No atribuir conocimiento a quien no lo confirmó.** Una hipótesis generada por IA no se registra como regla aceptada por cliente o experto de dominio hasta verificarla.
 5. **Minimizar la carga de control.** Reutilizar pruebas, PR, commits, incidencias y registros existentes como evidencia; agregar documentos solo cuando sea necesario para comprender o decidir.
 6. **Revisar el modelo cuando falle.** La clasificación y los niveles aquí descritos son hipótesis de diseño, no umbrales científicamente validados.
+7. **Conservar aportes constructivos con consecuencias.** Una propuesta, objeción, corrección o alternativa relevante para el trabajo presente o futuro debe quedar referenciada donde se toman decisiones, aunque finalmente se descarte. No se trata de registrar cada pensamiento ni de multiplicar documentos.
 
 ## 3. Tres dimensiones para graduar el control
 
@@ -66,9 +67,25 @@ Antes de delegar o integrar, cuando sea pertinente:
 2. **¿Qué se ha confirmado?** Separar datos/reglas validados por el cliente de supuestos del humano o de IA.
 3. **¿Qué puede fallar?** Identificar impacto, reversibilidad y verificabilidad.
 4. **¿Quién puede hacer qué?** Delimitar herramientas, datos, permisos, entorno, condiciones de detención y responsable humano.
-5. **¿Cómo sabremos que funcionó?** Acordar evidencia proporcional y resultado observable.
+5. **¿Cómo sabremos que funcionó?** Precisar **qué afirmación** se intenta demostrar, acordar evidencia proporcional a ella y distinguir resultado técnico de valor entregado al cliente.
+6. **¿Cómo se sale de un bloqueo?** Registrar solución o alternativas, siguiente acción, responsable, dependencias y criterio verificable de desbloqueo, o explicar por qué se detiene.
+7. **¿Qué merece conservarse?** Registrar las aportaciones constructivas que puedan afectar decisiones, riesgos, implementación o seguimiento, indicando su estado y procedencia.
 
 Si el riesgo o la incertidumbre cambian durante la tarea, se detiene la acción potencialmente dañina y se vuelve a clasificar antes de continuar.
+
+### Correspondencia entre afirmación y evidencia (propuesta R1)
+
+La prueba exigida depende de **lo que se afirma**, no automáticamente de la complejidad del sistema en su conjunto:
+
+| Afirmación | Evidencia pertinente, según el caso | Lo que no demuestra por sí sola |
+| --- | --- | --- |
+| **Componente**: una regla o función se comporta correctamente | Prueba unitaria, propiedades, regresión o mutación controlada | Que la integración o el producto completo funcionen |
+| **Integración**: varios componentes o sistemas intercambian datos correctamente | Prueba integrada, contrato, traza o emulación que ejecute los componentes reales | Fidelidad del entorno físico o satisfacción del cliente |
+| **Sistema en contexto de uso**: la solución funciona donde debe operar | Demostración representativa, prueba de aceptación, medición o prueba física autorizada cuando sea necesaria | Que el cliente haya recibido todo el valor prometido |
+| **Resultado para el cliente**: la necesidad acordada quedó resuelta | Criterio observable de uso/entrega, aceptación competente y limitaciones documentadas | Mejoras generales de productividad por utilizar IA |
+| **Eficacia de HUMENGIA**: este modo de colaboración mejora resultados | Indicadores, costos y contraste razonable con alternativas o línea base, incluyendo resultados desfavorables | Generalización causal a otros contextos a partir de un solo caso |
+
+Un ensayo parcial puede aprobarse **en su propio alcance** sin exigir una prueba superior que todavía no sea posible, pero no se le atribuye el resultado superior. En cambios físicos o críticos prevalecen siempre los permisos, controles y puertas de seguridad del proyecto; la proporcionalidad no los rebaja. Si no hay evidencia suficiente, se indica **pendiente**, **bloqueado** o **no concluyente**, no «validado».
 
 ## 6. Procedencia de decisiones: registro ligero
 
@@ -86,11 +103,21 @@ Para decisiones relevantes, registrar en una PR, incidencia, commit, acta o DEC 
 
 **Ejemplo breve (hipotético):** «La IA propuso permitir dos postulaciones por oferta; el ingeniero detectó ambigüedad; el responsable del proceso confirmó una sola postulación activa por candidato y oferta; se añadió prueba del caso duplicado; responsable X aprobó la decisión». Sin esa confirmación, la regla quedaría pendiente.
 
-No se exige guardar conversaciones completas, prompts internos, datos sensibles ni secretos; se conserva únicamente evidencia pertinente, con enlaces cuando exista.
+**Trazabilidad constructiva (propuesta R3):** registrar donde se trabaja —issue, PR, decisión o registro existente— las observaciones, hipótesis, alternativas, críticas y pruebas **que puedan cambiar una decisión o guiar trabajo futuro**, incluso si se rechazan o contradicen una predicción de la IA. Conservar al menos el aporte, su procedencia, fundamento o evidencia, estado (**propuesto, aprobado/rechazado, implementado, comprobado o pendiente**, según corresponda) y siguiente acción si existe. **Que una idea esté escrita no la convierte en aprobación humana ni en hecho demostrado.**
+
+Si se descubre un bloqueo, enlazar desde ese mismo registro la alternativa elegida, quién decide, cómo se comprobará el desbloqueo y qué sigue pendiente de entregar al beneficiario. Conservar el error y su corrección sin reescribir retrospectivamente la predicción inicial.
+
+No se exige guardar conversaciones completas, razonamientos privados, prompts internos, ideas triviales, datos sensibles ni secretos; se conserva únicamente evidencia pertinente, con enlaces cuando exista. Evitar registros paralelos que dupliquen una misma decisión.
 
 ## 7. Uso experimental en HUMENGIA
 
 El propio proyecto puede ser un **piloto de viabilidad** del registro de procedencia: permite observar si es posible reconstruir cambios y decisiones, el tiempo requerido y las omisiones encontradas. **No demuestra por sí solo ganancias de productividad ni calidad en proyectos de clientes.**
+
+### Aprendizajes exploratorios observados
+
+En una aplicación piloto surgieron tres tipos de corrección del procedimiento: ajustar una exigencia de prueba al **alcance de la afirmación**, distinguir cobertura nueva de cobertura ya existente tras una predicción parcialmente refutada y evitar que propuestas de solución queden fuera del registro de decisiones. También se observó que un control técnico aprobado **no equivale** a un producto utilizable.
+
+Estas observaciones motivan R1 y R3, **no acreditan** que HUMENGIA mejore productividad, calidad o resultados en general. La evidencia específica permanece en su proyecto de origen; cualquier relato público de pilotos debe ser agregado o anonimizado y no divulgar datos, enlaces ni artefactos privados sin autorización.
 
 ### Primera aplicación sugerida
 
