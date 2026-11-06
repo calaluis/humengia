@@ -146,8 +146,12 @@ No se cambiarán políticas, puertas de seguridad, derechos de acceso ni requisi
 
 Una sola experiencia sirve para comprobar **viabilidad y encontrar defectos del modelo**, no para acreditar superioridad universal ni causalidad. Para evolucionar HUMENGIA, registrar solo **aprendizajes generalizables sin revelar datos privados**, incluso predicciones refutadas y prácticas que añadieron sobrecarga; proponer correcciones, contrastarlas y someter su adopción a revisión humana. Un piloto documentado no convierte automáticamente sus hallazgos en reglas universales.
 
+Los aprendizajes generales se mantienen en el [registro exploratorio de pilotos](./investigacion/registro-pilotos.md), con su procedencia, límites y estado de revisión; no sustituye la evidencia del proyecto de origen ni autoriza divulgar información confidencial.
+
 ## 10. Estado y decisión pendiente
 
 **Esta es la propuesta de diseño HUMENGIA v0.1 para revisión.** Reúne el uso práctico del modelo y deja el respaldo conceptual en los documentos enlazados. Su integración en `main` significará **autorizar un ensayo controlado**, nunca afirmar que HUMENGIA ha quedado demostrado.
+
+**Estado de R1–R4:** mientras la [PR #6](https://github.com/calaluis/humengia/pull/6) no reciba aprobación humana, permanecen **propuestas pendientes**. Si el mantenedor aprueba y fusiona esa PR, pasan a ser **reglas operativas aceptadas para experimentación controlada**, no prácticas empíricamente validadas ni requisitos universales. Su continuidad dependerá de evidencias de aplicación y nuevas decisiones trazables.
 
 La revisión puede reducir, modificar o eliminar componentes que no aporten a la premisa. Tras cerrar esta propuesta, **la prioridad deja de ser ampliar la documentación y pasa a producir evidencia de un caso real**.
