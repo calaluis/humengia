@@ -117,7 +117,7 @@ El propio proyecto puede ser un **piloto de viabilidad** del registro de procede
 
 En una aplicación piloto surgieron tres tipos de corrección del procedimiento: ajustar una exigencia de prueba al **alcance de la afirmación**, distinguir cobertura nueva de cobertura ya existente tras una predicción parcialmente refutada y evitar que propuestas de solución queden fuera del registro de decisiones. También se observó que un control técnico aprobado **no equivale** a un producto utilizable.
 
-Estas observaciones motivan R1 y R3, **no acreditan** que HUMENGIA mejore productividad, calidad o resultados en general. La evidencia específica permanece en su proyecto de origen; cualquier relato público de pilotos debe ser agregado o anonimizado y no divulgar datos, enlaces ni artefactos privados sin autorización.
+Estas observaciones motivan R1 y R3, **no acreditan** que HUMENGIA mejore productividad, calidad o resultados en general. La evidencia específica permanece en su proyecto de origen; cualquier relato público de pilotos debe ser agregado o anonimizado y no divulgar datos, enlaces ni artefactos privados sin autorización. La procedencia, los límites y las propuestas derivadas se reúnen en el [registro exploratorio de pilotos](../investigacion/registro-pilotos.md), sin duplicar evidencias internas.
 
 ### Primera aplicación sugerida
 
@@ -160,5 +160,7 @@ Un caso propio puede demostrar factibilidad y revelar problemas, pero **no justi
 ## 10. Estado de aprobación y límites
 
 **DEC-002 integra la [propuesta operativa HUMENGIA v0.1](../PROPUESTA-HUMENGIA-v0.1.md) y es una propuesta para discusión.** No autoriza por sí misma automatizaciones ni intervenciones en sistemas de terceros, no modifica la premisa del README y no reemplaza DEC-001. Su utilidad y proporcionalidad deben contrastarse con casos reales antes de convertirla en práctica estable. El mantenedor decidirá si acepta la propuesta, solicita correcciones o la descarta.
+
+**Estado de las reglas R1–R4:** permanecen **propuestas pendientes de decisión humana** durante la revisión de la [PR #6](https://github.com/calaluis/humengia/pull/6). Una aprobación y fusión explícita las adoptaría **solo para ensayo controlado**, sin afirmar validación empírica, superioridad causal ni autorización adicional para acciones de riesgo. La decisión y los resultados posteriores se registrarán en la [Issue #5](https://github.com/calaluis/humengia/issues/5) y en el registro de pilotos, según corresponda.
 
 Su relación con DDD, TOGAF, BPM y otras disciplinas es **selectiva y orientada por el problema**; el objetivo sigue siendo ingeniería de software centrada en el cliente mediante colaboración humana e IA, no un marco universal de dirección de empresas.
