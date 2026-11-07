@@ -67,3 +67,25 @@ Esta propuesta concreta el principio de **Propósito humano**, la **Ingeniería 
 La regla UI-1 queda propuesta en [Issue #8](https://github.com/calaluis/humengia/issues/8) para revisión humana.
 
 **La creación o eventual fusión de esta DEC no demuestra por sí misma beneficios empíricos.** Si se aprueba, la regla quedará adoptada para experimentación controlada y deberá contrastarse con resultados de uso, efectos no deseados y sobrecarga. No autoriza cambios en otros proyectos ni declara aprobaciones de clientes inexistentes.
+
+## 8. Fundamentación normativa (referencias, no declaración de conformidad)
+
+UI-1 es una **regla propia de HUMENGIA** consistente con modelos y prácticas de ingeniería y aseguramiento de calidad. Las normas siguientes respaldan su razonamiento; **ninguna de estas referencias afirma que la ISO exija textualmente validar toda funcionalidad exclusivamente mediante una UI gráfica**.
+
+| Referencia | Alcance publicado por ISO | Contribución al criterio UI-1 |
+| --- | --- | --- |
+| [ISO/IEC 25010:2023](https://www.iso.org/standard/78176.html) — SQuaRE, modelo de calidad del producto | Establece un modelo de nueve características de calidad del producto | Permite distinguir la **adecuación funcional** de la **capacidad de interacción** y otras propiedades no funcionales. La lógica implementada no basta para inferir uso efectivo. |
+| [ISO/IEC 25019:2023](https://www.iso.org/standard/78177.html) — SQuaRE, modelo de calidad en uso | Define calidad en uso para sistemas y software en contextos especificados; admite establecer criterios de aceptación | Sustenta observar el resultado en la experiencia y contexto de uso del beneficiario. |
+| [ISO/IEC/IEEE 29119-1:2022](https://www.iso.org/standard/81291.html) — Pruebas de software, conceptos generales | Presenta tipos y niveles de prueba; entre los ejemplos figuran pruebas funcionales, de seguridad, rendimiento, usabilidad y aceptación | Evita sustituir una prueba de aceptación del recorrido por una suma de pruebas unitarias o de integración. |
+| [ISO/IEC/IEEE 29119-2:2021](https://www.iso.org/standard/79428.html) — Procesos de prueba | Define procesos para dirigir, gestionar y ejecutar pruebas de software aplicables a distintos ciclos de vida | Orienta a elegir la estrategia y evidencia de prueba pertinente al riesgo del incremento. |
+| [ISO/IEC/IEEE 29119-4:2021](https://www.iso.org/standard/79430.html) — Técnicas de prueba | Define técnicas de diseño de pruebas | Apoya diseñar casos verificables a partir del comportamiento comprometido. |
+| [ISO/IEC 25023:2016](https://www.iso.org/standard/35747.html) — Medición de calidad del producto | Define medidas para evaluar características de calidad del producto | Ayuda a elegir medidas cuantitativas cuando aporten valor; no fija un umbral universal de aceptación. |
+
+### 8.1 Interpretación práctica
+
+- **Pruebas funcionales:** verificar operaciones y resultados acordados. En sistemas con interfaz usuaria, al menos la aceptación de la capacidad operativa requiere observar el flujo pertinente desde esa interfaz.
+- **Pruebas no funcionales:** seleccionar según riesgo las que correspondan a interacción, rendimiento, seguridad, fiabilidad, accesibilidad y otras características relevantes; una UI navegable no garantiza estas cualidades.
+- **Pruebas técnicas y aceptación de usuario:** son complementarias. Pueden realizarse en distintos niveles y con distintas técnicas; el criterio UI-1 no impone una herramienta, un número universal de pruebas ni un proceso de certificación.
+- **Limitación:** la propuesta se apoya en descripciones y conceptos publicados por ISO, sin afirmar evaluación de conformidad, certificación ni reproducción del contenido íntegro de las normas.
+
+**Trazabilidad:** esta fundamentación amplía la justificación de [Issue #8](https://github.com/calaluis/humengia/issues/8), sin alterar el estado **propuesto** de UI-1 ni los derechos de aprobación del mantenedor humano.
