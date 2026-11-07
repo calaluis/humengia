@@ -3,7 +3,7 @@
 **Estado:** Propuesta de ingeniería completa para revisión; **pendiente de validación práctica**.  
 **Alcance:** Ingeniería de software centrada en el cliente, mediante colaboración humano–IA.  
 **Naturaleza:** Modelo operativo adaptable, no estándar, certificación ni metodología de otro autor.  
-**Fundamentos:** [README](./README.md) · [DEC-001](./decisiones/DEC-001-colaboracion-humano-ia.md) · [DEC-002](./decisiones/DEC-002-delegacion-revision-humano-ia.md) · [Marco teórico](./investigacion/marco-teorico.md).
+**Fundamentos:** [README](./README.md) · [DEC-001](./decisiones/DEC-001-colaboracion-humano-ia.md) · [DEC-002](./decisiones/DEC-002-delegacion-revision-humano-ia.md) · [DEC-003](./decisiones/DEC-003-continuidad-tecnologica.md) · [Marco teórico](./investigacion/marco-teorico.md).
 
 ## 1. Premisa rectora
 
@@ -71,6 +71,8 @@ Se utiliza el modelo cualitativo de [DEC-002](./decisiones/DEC-002-delegacion-re
 Se considera la dimensión más exigente entre **impacto (I), dificultad de reversión (R) y dificultad de verificación (V)**, sin promediar. La matriz es una **hipótesis operativa**: debe ser evaluada y revisada con el piloto.
 
 No se autorizan implícitamente accesos a secretos, despliegues productivos, operaciones irreversibles ni actuaciones sobre hardware o datos sensibles. Las reglas y permisos existentes en cada proyecto **prevalecen**.
+
+**Continuidad tecnológica (CT-1):** antes de implementar, se identifica el stack y ecosistema existentes del proyecto. En evolución o mantenimiento, la IA no introduce por conveniencia un lenguaje, runtime, framework o ecosistema paralelo para funcionalidades, tooling, scripts, automatizaciones o pruebas mantenibles si la capacidad puede resolverse dentro de la tecnología ya adoptada. Si la propuesta queda fuera del stack existente, se detiene y se rediseña dentro de él. La excepción es una decisión explícita del cliente de construir el sistema o subsistema desde cero; en ese caso la selección tecnológica vuelve a tratarse como una decisión de arquitectura. Véase [DEC-003](./decisiones/DEC-003-continuidad-tecnologica.md).
 
 ## 6. Evidencia y procedencia, sin formularios redundantes
 
