@@ -44,6 +44,8 @@ Estas son hipótesis de trabajo, no resultados de una comparación experimental.
 
 **Agnosticismo tecnológico y metodológico:** HUMENGIA no prescribe lenguajes, paradigmas de programación, sistemas operativos, arquitecturas, plataformas, proveedores de IA ni herramientas específicas. Tampoco exige adoptar íntegramente un marco externo: se consideran sus aportes según su utilidad para el cliente y el problema.
 
+Este agnosticismo pertenece al **marco HUMENGIA**, no autoriza a sustituir o ampliar por conveniencia el stack de un proyecto existente. En mantenimiento y evolución prevalece la **continuidad tecnológica del proyecto**: funcionalidades, herramientas auxiliares, scripts, automatizaciones y pruebas mantenibles deben permanecer en el ecosistema ya adoptado, salvo que el cliente decida explícitamente una reconstrucción desde cero. La decisión operativa y su gate se detallan en [DEC-003](./DEC-003-continuidad-tecnologica.md).
+
 ### Relación selectiva con conocimientos existentes
 
 Los enfoques siguientes ofrecen conocimientos útiles cuya incorporación dependerá del contexto:

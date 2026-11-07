@@ -70,6 +70,7 @@ Antes de delegar o integrar, cuando sea pertinente:
 5. **¿Cómo sabremos que funcionó?** Precisar **qué afirmación** se intenta demostrar, acordar evidencia proporcional a ella y distinguir resultado técnico de valor entregado al cliente.
 6. **¿Cómo se sale de un bloqueo?** Registrar solución o alternativas, siguiente acción, responsable, dependencias y criterio verificable de desbloqueo, o explicar por qué se detiene.
 7. **¿Qué merece conservarse?** Registrar las aportaciones constructivas que puedan afectar decisiones, riesgos, implementación o seguimiento, indicando su estado y procedencia.
+8. **¿Se respeta la continuidad tecnológica?** Identificar el stack y ecosistema ya adoptados antes de implementar. Si la propuesta introduce un lenguaje, runtime, framework o ecosistema nuevo —también en scripts, tooling, automatización o pruebas mantenibles— y el cliente no ha decidido reconstruir desde cero, detener la implementación y rediseñarla dentro del stack existente. Véase [DEC-003](./DEC-003-continuidad-tecnologica.md).
 
 Si el riesgo o la incertidumbre cambian durante la tarea, se detiene la acción potencialmente dañina y se vuelve a clasificar antes de continuar.
 
