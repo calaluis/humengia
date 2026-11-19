@@ -110,6 +110,14 @@ Si se descubre un bloqueo, enlazar desde ese mismo registro la alternativa elegi
 
 No se exige guardar conversaciones completas, razonamientos privados, prompts internos, ideas triviales, datos sensibles ni secretos; se conserva únicamente evidencia pertinente, con enlaces cuando exista. Evitar registros paralelos que dupliquen una misma decisión.
 
+### Reutilización del contexto al retomar una tarea (propuesta de aplicación de R3)
+
+Al retomar una tarea, partir del último avance verificable y de las decisiones y evidencias enlazadas para el paso actual. Si el asistente ya recibió el antecedente pertinente al iniciar la sesión, reutilizarlo. Si falta un dato, buscarlo por identificador o tema y abrir únicamente los fragmentos necesarios.
+
+Ampliar la consulta cuando existan discrepancias, dudas sobre la vigencia de un antecedente o dependencias que el paso actual deba resolver. Contrastar el estado del trabajo con el repositorio, el issue, la PR o el resultado de los controles que correspondan.
+
+Para evaluar esta práctica, observar qué lecturas se repiten y, cuando se pueda medir, comparar el consumo de tokens al retomar tareas equivalentes con el mismo modelo y esfuerzo. Registrar también si faltó algún antecedente que obligara a repetir trabajo o afectara la verificación.
+
 ## 7. Uso experimental en HUMENGIA
 
 El propio proyecto puede ser un **piloto de viabilidad** del registro de procedencia: permite observar si es posible reconstruir cambios y decisiones, el tiempo requerido y las omisiones encontradas. **No demuestra por sí solo ganancias de productividad ni calidad en proyectos de clientes.**
